@@ -139,27 +139,27 @@ body {
   font-size: 120px;
   line-height: 120px;
 }
-@media (max-width: 768px) { /* Target screens up to 768px wide */
+@media only screen and (min-width: 1000px) {
   .card {
-    width: 100%; /* Make card full-width on smaller screens */
-    height: auto; /* Adjust height for smaller viewports */
-    max-width: none; /* Remove max-width restriction */
+    flex-direction: row-reverse;
   }
+  .outside {
+    width: 100%;
+    max-width: 50vw;
+    max-height: unset;
+  }
+}
 
-  .outside,
-  .inside {
-    width: 100%; /* Make elements full-width */
-    left: 0;
-    transform: none; /* Remove horizontal centering */
+@media only screen and (max-height: 640px) {
+  .card {
+    flex-direction: row-reverse;
   }
-
-  .inside h1 {
-    font-size: 60px; /* Scale down font size for better readability */
+  .outside {
+    width: 100%;
+    max-width: 50vw;
+    max-height: unset;
   }
-
-  .cake {
-    bottom: 15px; /* Adjust cake position for smaller height */
-  }
+}
 
   /* Adjust card padding and margin to improve readability */
   .card {
